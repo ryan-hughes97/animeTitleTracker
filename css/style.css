@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+.container {
+  max-width: 60%;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+  background: coral;
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 3rem;
+  margin: 1rem 0 0 0;
+  padding: 1rem 0 0 0;
+  text-align: center;
+  color: coral;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+form {
+  margin-top: 1.5rem;
+}
+
+h2 {
+  margin: .5rem 0;
+  padding: .5rem 0;
+  text-align: center;
+}
+
+input {
+  padding: .5rem .5rem;
+  font-size: 1.2rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn {
+  margin: 1rem 0;
+  padding: .5rem; 
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+}
+
+.btn:hover {
+  color: coral;
+}
+
+/* have ninja move off screen and bounce back in */
+
+.fa-user-ninja {
+  color: black;
+  transition: all .5s ease-in;
+}
+
+.fa-user-ninja:hover {
+  transform: translateY(-200px);
+}
+
+h3 {
+  text-align: center;
+}
+
+li {
+  border-radius: 5px;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+a:hover {
+  color: coral;
+}
+
+a.btn {
+  margin-top: 2rem;
+}
+
+/* a.to-top {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-decoration: underline;
+  color: white;
+
+  font-size: 1rem;
+  padding: .5rem;
+  margin: 1rem 0;
+} */
+
+@media(max-width: 500px){
+  .container {
+    max-width: 100%;
+  }
+  .fa-user-ninja:hover {
+    transform: translateY(0px);
+  }
+
+  
+}

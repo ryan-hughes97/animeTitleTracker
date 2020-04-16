@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4b6f36aabf.js" crossorigin="anonymous"></script>
+  <title>AniMan|Anime & Manga Tracker</title>
+</head>
+
+<body>
+  <head>
+    <h1>AniMan <i class="fas fa-user-ninja"></i></h1>
+    <p class="italic">Track your anime and manga like a ninja.</p>
+  </head>
+  <div class="message"></div>
+  <div id="anime-list" class="container">
+    <!-- <div>
+      <h2>Anime & Manga List</h2>
+    </div> -->
+    <div class="anime-list-child">
+      <form id="anime-form">
+        <div class="input-field">
+          <!-- <label for="anime">Add to List</label> -->
+          <input type="text" name="anime" id="anime" placeholder="New Title">
+        </div>
+        <input type="submit" value="Add to List" class="btn">
+      </form>
+    </div>
+    <br>
+    <div class="counter">
+      <h3># of Titles</h3>
+    </div>
+    <div>
+      <ul class="collection"></ul>
+    </div>
+    <div>
+      <a class="btn" href="#">Back to Top</a>
+    </div> 
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
