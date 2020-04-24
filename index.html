@@ -4,41 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/4b6f36aabf.js" crossorigin="anonymous"></script>
-  <title>AniMan|Anime & Manga Tracker</title>
+  <title>AniMan | Anime & Manga Tracker</title>
 </head>
 
 <body>
-  <head>
+  <header>
     <h1>AniMan <i class="fas fa-user-ninja"></i></h1>
-    <p class="italic">Track your anime and manga like a ninja.</p>
-  </head>
-  <div class="message"></div>
-  <div id="anime-list" class="container">
-    <!-- <div>
-      <h2>Anime & Manga List</h2>
-    </div> -->
-    <div class="anime-list-child">
-      <form id="anime-form">
-        <div class="input-field">
-          <!-- <label for="anime">Add to List</label> -->
-          <input type="text" name="anime" id="anime" placeholder="New Title">
-        </div>
-        <input type="submit" value="Add to List" class="btn">
-      </form>
-    </div>
-    <br>
-    <div class="counter">
-      <h3># of Titles</h3>
-    </div>
-    <div>
-      <ul class="collection"></ul>
-    </div>
-    <div>
-      <a class="btn" href="#">Back to Top</a>
-    </div> 
+  </header>
+  <div class="container container-1">
+    <form id="anime-form">
+      <div>
+        <label for="title">Title</label>
+        <input type="text" id="title" class="u-full-width">
+      </div>
+      <div>
+        <label for="type">Type</label>
+        <select name="type" id="type" class="u-full-width">
+          <option value="select" selected disabled>--Select One--</option>
+          <option value="Anime">Anime</option>
+          <option value="Manga">Manga</option>
+          <option value="Anime & Manga">Anime and Manga</option>
+        </select>
+      </div>
+      <div>
+        <label for="status">Status</label>
+        <select name="status" id="status" class="u-full-width">
+          <option value="select" selected disabled>--Select One--</option>
+          <option value="Completed">Completed</option>
+          <option value="Incomplete">Incomplete</option>
+          <option value="Ongoing">Ongoing</option>
+        </select>
+      </div>
+      <div>
+        <input type="submit" value="Add to List" class="u-full-width">
+      </div>
+    </form>
   </div>
+  <br>
+  <div class="container title-count"></div>
+  <div class="container container-2">
+    <table class="u-full-width">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Type</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="anime-list"></tbody>
+    </table>
+  </div>
+  <a href="#" class="btn back-to-top"><button>Back to Top</button></a>
+  <footer>
+    <p>AniMan &copy; 2020</p>
+  </footer>
   <script src="app.js"></script>
 </body>
 </html>

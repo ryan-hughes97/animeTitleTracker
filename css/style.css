@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #317256;
+  --secondary-color: #52bf90;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,122 +10,173 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  background: var(--secondary-color);
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #f4f4f4;
+  background: var(--primary-color);
+  border-top: 5px black solid;
+  border-bottom: 5px black solid;
 }
 
 .container {
   max-width: 60%;
   margin: auto;
-  padding: 0 2rem;
-  overflow: hidden;
-  background: coral;
+  padding: 20px;
   border-radius: 5px;
+  background: #fff;
 }
 
-h1 {
-  font-family: 'Shadows Into Light', cursive;
-  font-size: 3rem;
-  margin: 1rem 0 0 0;
-  padding: 1rem 0 0 0;
-  text-align: center;
-  color: coral;
+.container-2 {
+  display: none;
+  margin-bottom: 30px;
 }
 
-p {
-  margin: 0 0 1rem 0;
-  text-align: center;
-}
-
-p.italic {
-  font-style: italic;
-}
-
-form {
-  margin-top: 1.5rem;
-}
-
-h2 {
-  margin: .5rem 0;
-  padding: .5rem 0;
-  text-align: center;
+label {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2rem;
 }
 
 input {
-  padding: .5rem .5rem;
+  border: 2px solid #d6d3d3;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+select {
+  border: 2px solid #d6d3d3;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background: #fff;
+}
+
+select#status {
+  margin-bottom: 30px;
+}
+
+input[type="submit"] {
+  margin-bottom: 20px;
+  width: 100%;
+  background: #fff;
+  border: 2px #d6d3d3 solid;
+  transition: .5s all ease-in;
+}
+
+input[type="submit"]:hover {
+  background: #49ab81;
+  border: 2px #49ab81 solid;
+  color: #fff;
+}
+
+.title-count {
+  display: none;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+table {
   font-size: 1.2rem;
   width: 100%;
-  border: none;
-  border-radius: 5px;
 }
 
-.btn {
-  margin: 1rem 0;
-  padding: .5rem; 
-  background-color: white;
-  border: none;
-  border-radius: 5px;
-  display: block;
-  text-align: center;
+th {
+  padding: 10px 0;
+  text-align: left;
+  font-size: 1.3rem;
 }
 
-.btn:hover {
-  color: coral;
-}
-
-/* have ninja move off screen and bounce back in */
-
-.fa-user-ninja {
-  color: black;
-  transition: all .5s ease-in;
-}
-
-.fa-user-ninja:hover {
-  transform: translateY(-200px);
-}
-
-h3 {
-  text-align: center;
-}
-
-li {
-  border-radius: 5px;
-  border: none;
+td {
+  padding: 10px 0;
+  border-bottom: 1px #d6d3d3 dotted;
 }
 
 a {
+  color: gray;
   text-decoration: none;
-  color: black;
-  cursor: pointer;
 }
 
-a:hover {
-  color: coral;
-}
-
-a.btn {
-  margin-top: 2rem;
-}
-
-/* a.to-top {
+button {
   display: flex;
   justify-content: center;
-  text-align: center;
-  text-decoration: underline;
-  color: white;
-
+  width: 200px;
+  padding: 10px;
+  margin: auto;
+  border: none;
+  border-radius: 5px;
+  background: #fff;
   font-size: 1rem;
-  padding: .5rem;
-  margin: 1rem 0;
-} */
+  transition: .5s all ease-in;
+}
 
+button:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 25px;
+  border-top: 5px black solid;
+  border-bottom: 5px black solid;
+  background: var(--primary-color)
+}
+
+/* JS alert message classes */
+.success, .error{
+  color: white;
+  padding: 5px;
+  margin: 5px 0 15px 0;
+}
+
+.success{
+  background: rgb(18, 182, 18);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+.error{
+  background: rgb(247, 58, 58);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+/* Media Queries */
 @media(max-width: 500px){
   .container {
-    max-width: 100%;
-  }
-  .fa-user-ninja:hover {
-    transform: translateY(0px);
+    max-width: 98%;
   }
 
-  
+  th, td {
+    padding: 5px;
+  }
+
+  .container-2 {
+    padding: 3px;
+  }
+}
+
+@media(max-width: 768px){
+  .container {
+    max-width: 90%;
+  }
 }
