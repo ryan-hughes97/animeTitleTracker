@@ -74,8 +74,9 @@ class Store {
       animes = [];
     } else {
       animes = JSON.parse(localStorage.getItem('animes'));
+      animes.sort((a,b) => (a.title > b.title) ? 1: -1);
     }
-
+    
     return animes;
   }
 
@@ -145,7 +146,9 @@ document.getElementById('anime-form').addEventListener('submit', function(e){
     // Clear fields
     ui.clearFields();
 
+    // Count total of titles
     ui.countAnime();
+    
   }
 
 
@@ -169,8 +172,16 @@ document.getElementById('anime-list').addEventListener('click', function(e){
   e.preventDefault();
 })
 
+// Sort Alphabetically
+const sort = document.getElementById('sort');
+sort.addEventListener('click', sortAnime);
+
+function sortAnime() {
+  location.reload();
+}
+
 // THINGS I WANT TO ADD:
-// 1) Sort button by alphabetical order and date entered
+// 1) Sort by date entered
 // 2) add page numbers to longer lists
 // 3) Search Database (suggest ~3-5 titles as you type in letters)
 // 4) Add a Favorite button/ star
@@ -178,8 +189,7 @@ document.getElementById('anime-list').addEventListener('click', function(e){
 // THINGS I'M NOT SURE OF ADDING
 // 1) change font size of longer titles inputted (text goes over the list if text string is too long)
 //    Text may be too small. Maybe a '...' added after a certain number of characters inputted
-// 2) alert text when a new title is added to list 'You've added "Title" to the list'. This may get annoying
-// 3) Make the Back to Top button stick on the side (can always access it)
+// 2) Make the Back to Top button stick on the side (can always access it)
 
 // THINGS I ADDED ON MY OWN:
 // 1) confirm 'Remove "Title" from list?'
@@ -187,3 +197,4 @@ document.getElementById('anime-list').addEventListener('click', function(e){
 // 3) Back to Top button 
 // 4) Messages pop up when no title entered, when title is added to list, and when title is removed from list
 // 5) "Title was added" will show for 3s and then disappear
+// 6) Added sort alphabetically
